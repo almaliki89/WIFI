@@ -1,0 +1,54 @@
+
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data:">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>WiFiHack3r Lab</title>
+  <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+  <div class="app-shell">
+    <aside class="sidebar">
+      <div class="brand"><div class="brand-mark">W</div><div><strong>WiFiHack3r</strong><small>SECURITY LAB</small></div></div>
+      <div class="mode-pill"><span class="pulse"></span> SIMULATION MODE</div>
+      <nav>
+        <button class="nav-item active" data-view="overview">▦ <span>Overview</span></button>
+        <button class="nav-item" data-view="scenarios">⌘ <span>Scenario lab</span></button>
+        <button class="nav-item" data-view="passphrase">◈ <span>Passphrase guide</span></button>
+        <button class="nav-item" data-view="checklist">☷ <span>Hardening checklist</span></button>
+      </nav>
+      <div class="sidebar-foot"><span class="dot green"></span> Local lab online<br><small>No radio operations</small></div>
+    </aside>
+    <main class="main">
+      <header class="topbar">
+        <div><div class="eyebrow">EDUCATION / NETWORK DEFENSE</div><h1 id="page-title">Lab overview</h1></div>
+        <button class="button secondary" id="export-btn">Export report ↓</button>
+      </header>
+      <section class="notice"><strong>SIMULATION ONLY</strong><span>All networks are fictional. No real Wi-Fi traffic is scanned, captured, or modified.</span></section>
+      <section id="view-overview" class="view">
+        <div class="stats">
+          <article class="stat-card"><span>DEMO NETWORKS</span><strong id="network-count">03</strong><small>Fictional inventory</small></article>
+          <article class="stat-card"><span>LAB EVENTS</span><strong id="event-count">00</strong><small>Session timeline</small></article>
+          <article class="stat-card"><span>SCENARIOS</span><strong>05</strong><small>Concept demonstrations</small></article>
+          <article class="stat-card"><span>RADIO ACTIONS</span><strong>0</strong><small>Disabled by design</small></article>
+        </div>
+        <div class="content-grid">
+          <section class="panel wide"><div class="panel-head"><div><h2>Fictional access points</h2><p>Sample inventory generated locally</p></div><span class="tag">DEMO DATA</span></div>
+            <div class="table-wrap"><table><thead><tr><th>NETWORK</th><th>SECURITY</th><th>CHANNEL</th><th>SIGNAL</th><th>ASSESSMENT</th></tr></thead><tbody id="network-rows"></tbody></table></div>
+          </section>
+          <section class="panel"><div class="panel-head"><div><h2>Quick simulations</h2><p>Choose a concept to explain</p></div></div><div id="quick-actions" class="quick-actions"></div></section>
+          <section class="panel wide"><div class="panel-head"><div><h2>Activity timeline</h2><p>Recent local educational events</p></div><button class="text-button" id="clear-events">Clear timeline</button></div><div id="event-list" class="event-list"></div></section>
+        </div>
+      </section>
+      <section id="view-scenarios" class="view hidden"><div class="panel"><div class="panel-head"><div><h2>Scenario lab</h2><p>Each action explains the concept and defensive mitigation without executing an attack.</p></div></div><div id="scenario-cards" class="scenario-grid"></div></div></section>
+      <section id="view-passphrase" class="view hidden"><div class="panel form-panel"><h2>Passphrase strength guide</h2><p>Local heuristic only. Do not enter a real password; use an example phrase for classroom demonstrations.</p><label for="phrase">Example passphrase</label><input id="phrase" type="text" maxlength="256" placeholder="Type a fictional example…"><button class="button primary" id="assess-btn">Assess example</button><div id="phrase-result" class="result-box hidden"></div><div class="hint">Tip: prefer a unique passphrase of 16+ characters and enable MFA for accounts that support it.</div></div></section>
+      <section id="view-checklist" class="view hidden"><div class="panel"><div class="panel-head"><div><h2>Router hardening checklist</h2><p>Defensive review prompts for an authorized network owner</p></div></div><div id="checklist" class="checklist"></div></div></section>
+      <footer>WiFiHack3r Lab <span>•</span> Educational simulator <span>•</span> v1.0.0</footer>
+    </main>
+  </div>
+  <div id="toast" role="status" class="toast hidden"></div>
+  <script src="./app.js"></script>
+</body>
+</html>

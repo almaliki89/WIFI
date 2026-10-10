@@ -1,0 +1,30 @@
+
+node_modules/
+dist/
+out/
+coverage/
+*.log
+.DS_Store
+Thumbs.db
+.env
+captures/*
+!captures/.gitkeep
+logs/*
+!logs/.gitkeep
+assets/wordlists/*
+!assets/wordlists/.gitkeep
+
+# Local-only settings and diagnostic files
+.continue/
+.electron-diagnostic/
+
+# Environment files: keep the example template only
+.env*
+!.env.example
+
+# Private keys and captured traffic
+*.pem
+*.key
+*.p12
+*.pfx
+*.cap
